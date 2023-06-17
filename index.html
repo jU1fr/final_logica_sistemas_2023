@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inputs tipo number</title>
+</head>
+<body>
+
+    <input type="number" id="input1" name="input1">
+    <input type="number" id="input2" name="input2">
+    <input type="number" id="input3" name="input3">
+    <button type="button" onclick="calcular()">Calcular</button>
+    <button type="button" onclick="calcular()">Calcular2</button>
+    <p id="resultado"></p>
+    
+    <script>
+      function calcular() {
+        var valor1 = parseInt(document.getElementById("input1").value);
+        var valor2 = parseInt(document.getElementById("input2").value);
+        var valor3 = parseInt(document.getElementById("input3").value);
+        var resultado = document.getElementById("resultado");
+    
+        if (valor1 < valor3) {
+          var multiplicacion = valor1 * valor2 * valor3;
+          resultado.innerHTML = "Multiplicando " + valor1 + " 1 " + valor2 + " 0 " + valor3 + " 3 " + multiplicacion;
+        } else if (valor2 === 0) {
+          var mayor = Math.max(valor1, valor3);
+          var menor = Math.min(valor1, valor3);
+          var resta = mayor - menor;
+          resultado.innerHTML = "Restando " + mayor + " - " + menor + " = " + resta;
+        } else {
+          resultado.innerHTML = "No se cumple ninguna condición.";
+        }
+      }
+    </script>
+    
+
+
+
+    
+</body>
+</html>
